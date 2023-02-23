@@ -1,0 +1,11 @@
+<root>
+<response>
+    <profile>user1</profile>
+    <profile>user2</profile>
+    <data>
+        <username>Jack</username>
+        <username>Mary</username>
+    </data>
+</response>
+<status>ok</status>
+</root>
