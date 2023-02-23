@@ -2,14 +2,23 @@ import re
 
 
 def read_file(file_name: str) -> str:
+   
     with open(f'{file_name}', 'r') as f:
         xml_data = f.read()
 
-    xml_data = ''.join(xml_data.split('\n'))
-    xml_data = ''.join(xml_data.split())
-    return xml_data
+    return concatenate_to_one_row(xml_data)
+
+def concatenate_to_one_row(file_content: str) -> str:
+    
+    file_content = ''.join(file_content.split('\n'))
+    file_content = ''.join(file_content.split())
+    
+    return file_content
 
 def parse_xml(xml_string: str) -> dict:
+    
+    xml_string = concatenate_to_one_row(xml_string)
+    
     root = {}
     stack = [(root, xml_string)]
     
@@ -33,7 +42,5 @@ def parse_xml(xml_string: str) -> dict:
     return root
 
 
-
 if __name__ == '__main__':
     print(parse_xml(read_file('file.xml')))
-
