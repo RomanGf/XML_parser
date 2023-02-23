@@ -1,6 +1,6 @@
 import pytest
 
-from main import concatenate_to_one_row
+from ..main import concatenate_to_one_row
 
 def test_must_return_concatenated_when_xml_with_new_lines_was_provided():
     test_data = '''

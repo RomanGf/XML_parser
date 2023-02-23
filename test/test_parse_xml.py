@@ -1,6 +1,6 @@
 import pytest
 
-from main import parse_xml, read_file
+from ..main import parse_xml, read_file
 
 
 @pytest.fixture
